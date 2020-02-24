@@ -9,14 +9,14 @@ class CheckSumCalculator {
   private var sum = 0
 
   /**
-    * Adds the passed <code>Byte</code> to the checksum
+    * Adds the passed <Code>Byte</Code> to the checksum
     *
     * @param b the <Code>Byte</Code> to add.
     **/
   def add(b: Byte): Unit = sum += b
 
-  /** Gets a checksum for all the <code>Byte</code>s passed
-    * to <code>add</code>. The sum of the integer
+  /** Gets a checksum for all the <Code>Byte</Code>s passed
+    * to <Code>add</Code>. The sum of the integer
     * returned by this method, when added to the
     * sum of all the passed bytes will yield zero.
     */
@@ -32,7 +32,7 @@ object CheckSumCalculator {
   def calcChecksum(s: String): Int = {
 
     val cc = new CheckSumCalculator
-    s.foreach(c => cc.add(c))
+    s.foreach(c => cc.add(c.asInstanceOf[Byte]))
     cc.checksum
 
   }
